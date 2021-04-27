@@ -1,3 +1,4 @@
+// Commented
 import React,{useRef} from 'react'
 import db,{auth} from '../firebase';
 import "./SignupScreen.css"
@@ -5,7 +6,6 @@ import "./SignupScreen.css"
 function SignupScreen() {
     const emailRef = useRef();
     const passwordRef = useRef(null);
-
 
     const register = (e) => {
         e.preventDefault();
@@ -27,7 +27,9 @@ function SignupScreen() {
         .then((authUser) => {
             console.log(authUser);
         })
-        .catch((error) => alert(error.message));
+        .catch((error) => {alert(error.message)
+        alert("Make sure you sign Up");
+        });
     };
 
     return (
