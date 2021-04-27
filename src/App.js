@@ -31,19 +31,23 @@ function App() {
           }
         }
       );
-
       return unsubscribe;
       }
       , [dispatch])
-
+    
   return (
+    /*class App gives background color (black) */    
     <div className="App">
+    {/* Router to switch path */}
       <Router>
+    {/* If user available then display to HomeScreen else LoginScreen */}
         {!user ? (<LoginScreen/>) : (
         <Switch>
+          {/* for path /profile switch to ProfileScreen */}
           <Route path = "/profile">
             <ProfileScreen />
           </Route>
+           {/* for path /profile switch to homescreen */}
           <Route exact path="/">
            <HomeScreen />
           </Route>

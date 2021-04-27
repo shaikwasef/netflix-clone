@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// Create slice automatically generates actions for a set of reducers internally create Reducer and create Actions
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
