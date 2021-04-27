@@ -2,7 +2,8 @@
 import axios from './axios';
 import React, {useState,useEffect,useRef} from 'react'
 import "./Row.css"
-
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 //image url to fetch images
 const baseUrl = "https://image.tmdb.org/t/p/original/";
@@ -38,11 +39,8 @@ function Row({title,fetchUrl,isLargeRow = false}) {
             
             {/* Slide carousel arrows for posters */}
             <div className = "row_posters" ref = {posterRow} >
-            <div onClick = {slideRowLeft}  className = "slideRowLeft"role="button">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only"></span>
-            </div> 
-
+            <ArrowBackIosIcon onClick = {slideRowLeft} className = "slideRowLeft"/>
+            <ArrowForwardIosIcon onClick = {slideRowRight} className = "slideRowRight"/>
             <div onClick = {slideRowRight}  className = "slideRowRight" role="button">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="sr-only"></span>
@@ -60,8 +58,6 @@ function Row({title,fetchUrl,isLargeRow = false}) {
      
                             );}
                 })}
-                 
-            
             </div>
         </div>
     )

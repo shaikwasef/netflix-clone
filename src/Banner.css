@@ -27,7 +27,7 @@
 }
 
 .banner--fadeBottom{
-    height: 16rem;
+    height: 10rem;
     background: -webkit-linear-gradient(to bottom,transparent, rgba(37,37,37,0.61), #111);
     background: -moz-linear-gradient(to bottom,transparent, rgba(37,37,37,0.61), #111);
     background: -ms-linear-gradient(to bottom,transparent, rgba(37,37,37,0.61), #111);
