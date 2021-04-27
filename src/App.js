@@ -1,5 +1,4 @@
 import React,{useEffect } from 'react';
-import { Counter } from './features/counter/Counter';
 import './App.css';
 import HomeScreen from "./screens/HomeScreen"
 import {
@@ -17,6 +16,7 @@ function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
+  //To check if there is a user who is signed in
   useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(
         (userAuth) => {

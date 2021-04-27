@@ -1,3 +1,4 @@
+// Commented
 import React,{useRef} from 'react'
 import db,{auth} from '../firebase';
 import "./SignupScreen.css"
@@ -6,7 +7,7 @@ function SignupScreen() {
     const emailRef = useRef();
     const passwordRef = useRef(null);
 
-
+    // Register user using firebase
     const register = (e) => {
         e.preventDefault();
         auth.createUserWithEmailAndPassword(
@@ -18,6 +19,7 @@ function SignupScreen() {
         })
     };
 
+    //Sign in user . Check  if user account exists
     const signIn = (e) => {
         e.preventDefault();
         auth.signInWithEmailAndPassword(
@@ -27,7 +29,9 @@ function SignupScreen() {
         .then((authUser) => {
             console.log(authUser);
         })
-        .catch((error) => alert(error.message));
+        .catch((error) => {alert(error.message)
+        alert("Make sure you sign Up");
+        });
     };
 
     return (

@@ -1,3 +1,4 @@
+// Commented
 import React from 'react'
 import "./LoginScreen.css"
 import { useState } from "react"
@@ -34,7 +35,7 @@ function LoginScreen() {
                             <form>
                                 <input type = "email"
                                 placeholder = "Email Address"/>
-                                <button className = "loginScreen_getStarted">GET STARTED</button>
+                                <button className = "loginScreen_getStarted" onClick = {()=>alert("Please sign in using the sign in button")}>GET STARTED</button>
                             </form>
                         </div>
                 </>
