@@ -7,6 +7,7 @@ function SignupScreen() {
     const emailRef = useRef();
     const passwordRef = useRef(null);
 
+    // Register user using firebase
     const register = (e) => {
         e.preventDefault();
         auth.createUserWithEmailAndPassword(
@@ -18,6 +19,7 @@ function SignupScreen() {
         })
     };
 
+    //Sign in user . Check  if user account exists
     const signIn = (e) => {
         e.preventDefault();
         auth.signInWithEmailAndPassword(
